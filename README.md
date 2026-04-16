@@ -10,3 +10,4 @@ pip install -r requirements.txt
 
 ----------> Run slurm files
 
+s6.slurm
