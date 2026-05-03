@@ -1,13 +1,48 @@
-conda create -n GraphSSM python=3.10
-conda activate GraphSSM
+## Repository Structure
 
-pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu121
-pip install torch_geometric
-pip install pyg_lib torch_scatter torch_sparse torch_cluster torch_spline_conv -f https://data.pyg.org/whl/torch-2.2.0+cu121.html
+```text
+ltg_ssm/
+├── layers/
+│   ├── gnn.py           
+│   ├── mixing.py        
+│   └── ssm.py           
+├── models/
+│   └── ltg_ssm.py       
+├── test_model.py       
+├── environment.yml      
+├── requirements.txt     
+└── README.md
+```
 
+## Installation
+
+You can set up the required environment using either `conda` or `pip`.
+
+### Option 1: Conda (Recommended)
+This will create an environment named `ltg_ssm` with PyTorch and PyTorch Geometric installed.
+```bash
+conda env create -f environment.yml
+conda activate ltg_ssm
+```
+
+### Option 2: Pip
+If you are using a standard virtual environment:
+```bash
 pip install -r requirements.txt
+```
 
+## 🚀 Usage
 
-----------> Run slurm files
+You can verify that the core `LTG-SSM` architecture initializes correctly and successfully backpropagates gradients by running the included synthetic test script:
 
-s6.slurm
+```bash
+python test_model.py
+```
+
+This will generate a synthetic temporal graph sequence across multiple snapshots, pass it through the GNN -> Mixing -> SSM pipeline, and compute a dummy cross-entropy loss.
+
+## Supported Datasets (To-Do)
+The architecture has been designed to support temporal node classification on large-scale datasets. Data loaders and training loops for the following datasets will be added:
+- **DBLP-3**
+- **Brain**
+- **Tmall** (Massive-scale E-commerce dataset)
