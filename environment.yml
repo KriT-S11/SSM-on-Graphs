@@ -1,0 +1,21 @@
+name: ltg_ssm
+channels:
+  - pytorch
+  - pyg
+  - defaults
+  - conda-forge
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pytorch-cuda=11.8
+  - pyg
+  - pip:
+      - numpy
+      - scipy
+      - scikit-learn
+      - pandas
+      - networkx
+      - tqdm
