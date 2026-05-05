@@ -1,5 +1,6 @@
 ## Repository Structure
 
+REFER TO BRANCH CODEBASE
 ```text
 ltg_ssm/
 ├── layers/
