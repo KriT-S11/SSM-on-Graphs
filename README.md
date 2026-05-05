@@ -1,8 +1,5 @@
 # Linearizing Temporal Graph Dynamics with State Space Models (LTG-SSM)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=flat&logo=PyTorch&logoColor=white)](https://pytorch.org/)
-
 This is the official PyTorch implementation of the paper **"Linearizing Temporal Graph Dynamics with State Space Models"**.
 
 ## 🗂️ Repository Structure
@@ -46,26 +43,10 @@ You can verify that the core `LTG-SSM` architecture initializes correctly and su
 python test_model.py
 ```
 
-This will generate a synthetic temporal graph sequence across multiple snapshots, pass it through the GNN -> Mixing -> SSM pipeline, and compute a dummy cross-entropy loss.
-
 ## 📈 Supported Datasets (To-Do)
-The architecture has been designed to support temporal node classification on large-scale datasets. Data loaders and training loops for the following datasets will be added:
+The architecture has been designed to support temporal node classification on large-scale datasets. Data loaders and training loops for the following datasets : 
 - **DBLP-3**
 - **Brain**
 - **Tmall** (Massive-scale E-commerce dataset)
 
-## 📝 Citation
 
-If you find this code or our paper useful in your research, please consider citing:
-
-```bibtex
-@article{ltg_ssm_2024,
-  title={Linearizing Temporal Graph Dynamics with State Space Models},
-  author={Sinha, Alankrit and others},
-  journal={arXiv preprint},
-  year={2024}
-}
-```
-
-## 📄 License
-This project is released under the MIT License.
